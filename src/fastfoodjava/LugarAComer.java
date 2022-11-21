@@ -55,6 +55,10 @@ public class LugarAComer {
     public void setCoord(double[] coord) {
         this.coord = coord;
     }
+    public void setCoord(double a, double b) {
+        this.coord[0] = a;
+        this.coord[1] = b;
+    }
     public void setTodo(String a, String b, double c, double[] d) {
         this.ubicacion = a;
         this.nombre = b;

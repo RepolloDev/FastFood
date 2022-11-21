@@ -22,8 +22,16 @@ public class Menu {
     public ArrayList<Comida> getComidas() {
         return comidas;
     }
-    public Comida getComidaIndex(int index) {
+    public Comida getComida(int index) {
         return this.comidas.get(index);
+    }
+    public Comida getComida(String nombre) {
+        for(Comida elemento : comidas) {
+            if (elemento.getNombre() == nombre) {
+                return elemento;
+            }
+        }
+        return new Comida();
     }
     public int getNroComidas() {
         return nroComidas;
@@ -110,7 +118,7 @@ public class Menu {
      * @param nombre    : nombre de la opcion de comida
      * @return          : Restorna si un Opcion de comida existe en el menú
      */
-    public boolean ExisteOpcion(String nombre) {
+    public boolean existeOpcion(String nombre) {
         boolean existe = false;
         for (Comida elemento : this.comidas) {
             if (elemento.getNombre() == nombre) {
@@ -124,7 +132,7 @@ public class Menu {
 
 
     /**
-     * * Metodos Condicionales repecto a atributos
+     * * Lista de OPCIONES de comida con precio >= ó <= al ingresado
      *
      * @param nombre    : nombre de COMIDA
      * @param precio    : precio de COMIDA

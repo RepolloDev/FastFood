@@ -42,7 +42,19 @@ public class Restaurante extends LugarAComer {
         this.paginaWeb = a;
         this.menu = b;
     }
+    public void setTodo(String a, String b, double c, double d, double e, String f, Menu G) {
+        super.setTodo(a, b, c, d, e);
+        this.paginaWeb = f;
+        this.menu = G;
+    }
 
     // Metodos
+
+    public Comida getOpcion(int index) {
+        return this.menu.getComida(index);
+    }
+    public Comida getOpcion(String nombre) {
+        return this.menu.getComida(nombre);
+    }
 
 }

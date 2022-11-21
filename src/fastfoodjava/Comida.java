@@ -37,7 +37,9 @@ public class Comida {
 
     /**
      * * Metodos de comparación PRECIO
-     * @param otraComida : Comida con la que se compara
+     *
+     * @param otraComida    : Comida con la que se compara
+     * @return              : Opcion comida que cumpla la condicion
      */
     public Comida MayorQue(Comida otraComida) {
 
