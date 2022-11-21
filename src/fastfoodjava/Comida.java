@@ -6,8 +6,9 @@ public class Comida {
 
     // Constructores - Getters / Setters
     public Comida() {
+        this.nombre = "salteña";
+        this.precio = 5;
     }
-
     public Comida(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
@@ -16,18 +17,22 @@ public class Comida {
     public String getNombre() {
         return nombre;
     }
-
     public double getPrecio() {
         return precio;
     }
 
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+    public void setTodo(String nombre, double precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
     // Metodos
 
     /**
@@ -49,6 +54,12 @@ public class Comida {
         } else {
             return otraComida;
         }
+    }
+
+
+
+    public void mostrar() {
+        System.out.printf("Nombre: %s \t Precio: %s", this.nombre, this.precio);
     }
 
 }

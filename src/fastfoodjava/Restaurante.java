@@ -8,9 +8,39 @@ public class Restaurante extends LugarAComer {
 
     // Contructores - Getters / Setters
     public Restaurante() {
+        super();
+        this.paginaWeb = "polloscopacabana.com";
+        this.menu = new Menu();
+    }
+    public Restaurante(String a, String b, double c, double[] d, String e, Menu f) {
+        super(a, b, c, d);
+        this.paginaWeb = e;
+        this.menu = f;
+    }
+    public Restaurante(String a, String b, double c, double d, double e, String f, Menu g) {
+        super(a, b, c, d, e);
+        this.paginaWeb = f;
+        this.menu = g;
     }
 
-    public Restaurante(String a, Menu b) {
+
+    public String getPaginaWeb() {
+        return paginaWeb;
+    }
+    public Menu getMenu() {
+        return menu;
+    }
+
+
+    public void setPaginaWeb(String paginaWeb) {
+        this.paginaWeb = paginaWeb;
+    }
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+    }
+    public void setTodo(String a, Menu b) {
+        this.paginaWeb = a;
+        this.menu = b;
     }
 
     // Metodos

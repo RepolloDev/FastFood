@@ -16,6 +16,58 @@ public class Registro {
 
     // Constructores - Getters / Setters
     public Registro() {
+        this.restaurantes = new ArrayList<Restaurante>();
+        this.nroRestaurantes = 0;
+        this.pensionesFijos = new ArrayList<PensionFijo>();
+        this.nroPensionesFijos = 0;
+        this.pensionesNoFijos = new ArrayList<PensionNoFijo>();
+        this.nroPensionesNoFijos = 0;
+        this.cliente = new Cliente();
+    }
+    public Registro(ArrayList<Restaurante> a, ArrayList<PensionFijo> b, ArrayList<PensionNoFijo> c, Cliente d) {
+        this.restaurantes = a;
+        this.nroRestaurantes = a.size();
+        this.pensionesFijos = b;
+        this.nroPensionesFijos = b.size();
+        this.pensionesNoFijos = c;
+        this.nroPensionesNoFijos = c.size();
+        this.cliente = d;
+    }
+
+
+    public ArrayList<Restaurante> getRestaurantes() {
+        return restaurantes;
+    }
+    public ArrayList<PensionFijo> getPensionesFijos() {
+        return pensionesFijos;
+    }
+    public ArrayList<PensionNoFijo> getPensionesNoFijos() {
+        return pensionesNoFijos;
+    }
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setRestaurantes(ArrayList<Restaurante> restaurantes) {
+        this.restaurantes = restaurantes;
+        this.nroRestaurantes = restaurantes.size();
+    }
+    public void setPensionesFijos(ArrayList<PensionFijo> pensionesFijos) {
+        this.pensionesFijos = pensionesFijos;
+        this.nroPensionesFijos = pensionesFijos.size();
+    }
+    public void setPensionesNoFijos(ArrayList<PensionNoFijo> pensionesNoFijos) {
+        this.pensionesNoFijos = pensionesNoFijos;
+        this.nroPensionesNoFijos = pensionesNoFijos.size();
+    }
+    public void setTodo(ArrayList<Restaurante> a, ArrayList<PensionFijo> b, ArrayList<PensionNoFijo> c, Cliente d) {
+        this.restaurantes = a;
+        this.nroRestaurantes = a.size();
+        this.pensionesFijos = b;
+        this.nroPensionesFijos = b.size();
+        this.pensionesNoFijos = c;
+        this.nroPensionesNoFijos = c.size();
+        this.cliente = d;
     }
 
     // Metodos
