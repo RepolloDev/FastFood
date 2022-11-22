@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Registro {
     // TODO: añadir métodos⭐ para interactura con el programa
     // ! Usando ArrayList para no usar "vectores"
+    // DOCUMENTACION : https://www.w3schools.com/java/java_arraylist.asp
 
     private ArrayList<Restaurante> restaurantes;        // Lista de Restaurante (📄)
     private ArrayList<PensionFijo> pensionesFijos;      // Lista de PensionFijo (📄)

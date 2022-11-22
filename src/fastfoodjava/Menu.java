@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Menu {
     // ! Usando ArrayList para no usar "vectores"
+    // DOCUMENTACION : https://www.w3schools.com/java/java_arraylist.asp
 
     private ArrayList<Comida> comidas;  // LISTA de comidas (📄)
     private int nroComidas;             // Número de elementos (📊)
@@ -50,6 +51,7 @@ public class Menu {
 
     /**
      * * General - Para agregar / quitar / editar
+     * ! Usando "FOREACH" para recorrer vector -> for(Clase elemento : Vector) {}
      *
      * @param nombre : nombre de la comida
      * @param precio : precio de la comida
@@ -114,6 +116,7 @@ public class Menu {
 
     /**
      * * EXISTENCIA de una Comida en el menu
+     * ! Usando "FOREACH" para recorrer vector -> for(Clase elemento : Vector) {}
      *
      * @param nombre    : nombre de la opcion de comida
      * @return          : Restorna si un Opcion de comida existe en el menú
@@ -133,6 +136,7 @@ public class Menu {
 
     /**
      * * Lista de OPCIONES de comida con precio >= ó <= al ingresado
+     * ! Usando "FOREACH" para recorrer vector -> for(Clase elemento : Vector) {}
      *
      * @param nombre    : nombre de COMIDA
      * @param precio    : precio de COMIDA
