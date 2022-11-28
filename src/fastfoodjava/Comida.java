@@ -1,6 +1,8 @@
 package fastfoodjava;
 
-public class Comida {
+import java.io.Serializable;
+
+public class Comida implements Serializable {
     private String nombre; // Nombre de la opción (🍗)
     private double precio; // Precio de la opición (💸)
 

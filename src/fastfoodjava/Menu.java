@@ -1,48 +1,52 @@
 package fastfoodjava;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Menu {
+public class Menu implements Serializable {
     // ! Usando ArrayList para no usar "vectores"
     // DOCUMENTACION : https://www.w3schools.com/java/java_arraylist.asp
 
-    private ArrayList<Comida> comidas;  // LISTA de comidas (📄)
-    private int nroComidas;             // Número de elementos (📊)
+    private ArrayList<Comida> comidas; // LISTA de comidas (📄)
+    private int nroComidas; // Número de elementos (📊)
 
     // Constructores - Getters / Setters
     public Menu() {
         this.comidas = new ArrayList<Comida>();
         this.nroComidas = 0;
     }
+
     public Menu(ArrayList<Comida> listaComida) {
         this.comidas = listaComida;
         this.nroComidas = listaComida.size();
     }
 
-
     public ArrayList<Comida> getComidas() {
         return comidas;
     }
+
     public Comida getComida(int index) {
         return this.comidas.get(index);
     }
+
     public Comida getComida(String nombre) {
-        for(Comida elemento : comidas) {
+        for (Comida elemento : comidas) {
             if (elemento.getNombre() == nombre) {
                 return elemento;
             }
         }
         return new Comida();
     }
+
     public int getNroComidas() {
         return nroComidas;
     }
-
 
     public void setComidas(ArrayList<Comida> comidas) {
         this.comidas = comidas;
         this.nroComidas = comidas.size();
     }
+
     public void setNroComidas(int nroComidas) {
         this.nroComidas = nroComidas;
     }
@@ -112,19 +116,17 @@ public class Menu {
         }
     }
 
-
-
     /**
      * * EXISTENCIA de una Comida en el menu
      * ! Usando "FOREACH" para recorrer vector -> for(Clase elemento : Vector) {}
      *
-     * @param nombre    : nombre de la opcion de comida
-     * @return          : Restorna si un Opcion de comida existe en el menú
+     * @param nombre : nombre de la opcion de comida
+     * @return : Restorna si un Opcion de comida existe en el menú
      */
     public boolean existeOpcion(String nombre) {
         boolean existe = false;
         for (Comida elemento : this.comidas) {
-            if (elemento.getNombre() == nombre) {
+            if (elemento.getNombre().equals(nombre)) {
                 existe = true;
                 break;
             }
@@ -132,15 +134,13 @@ public class Menu {
         return existe;
     }
 
-
-
     /**
      * * Lista de OPCIONES de comida con precio >= ó <= al ingresado
      * ! Usando "FOREACH" para recorrer vector -> for(Clase elemento : Vector) {}
      *
-     * @param nombre    : nombre de COMIDA
-     * @param precio    : precio de COMIDA
-     * @return          : Retorna una Array(vector) que cumpla la condicion
+     * @param nombre : nombre de COMIDA
+     * @param precio : precio de COMIDA
+     * @return : Retorna una Array(vector) que cumpla la condicion
      */
     public ArrayList<Comida> PrecioMenorQue(double precio) {
         ArrayList<Comida> menor = new ArrayList<Comida>();
@@ -172,7 +172,33 @@ public class Menu {
         return igual;
     }
 
+    public double precioTotal() {
+        double total = 0;
+        for (Comida elemento : this.comidas) {
+            total += elemento.getPrecio();
+        }
+        return total;
+    }
 
+    public double minPrecio() {
+        double sol = this.comidas.get(0).getPrecio();
+        for (Comida elemento : comidas) {
+            if (elemento.getPrecio() < sol) {
+                sol = elemento.getPrecio();
+            }
+        }
+        return sol;
+    }
+
+    public double maxPrecio() {
+        double sol = this.comidas.get(0).getPrecio();
+        for (Comida elemento : comidas) {
+            if (elemento.getPrecio() > sol) {
+                sol = elemento.getPrecio();
+            }
+        }
+        return sol;
+    }
 
     public void mostrar() {
         int index = 1;
@@ -180,7 +206,21 @@ public class Menu {
             String nombre = elemento.getNombre();
             double precio = elemento.getPrecio();
             System.out.printf("%s Nombre: %s \t Precio: %s", index, nombre, precio);
+            System.out.println();
             index++;
         }
+    }
+
+    public String mostrarString() {
+        String mostrar = "";
+        int index = 1;
+        for (Comida elemento : this.comidas) {
+            String nombre = elemento.getNombre();
+            double precio = elemento.getPrecio();
+            mostrar += index + " Nombre: " + nombre + " \t Precio: " + precio;
+            mostrar += "\n";
+            index++;
+        }
+        return mostrar;
     }
 }

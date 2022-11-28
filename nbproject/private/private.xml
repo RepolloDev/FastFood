@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="Programacion-orientada-objetos">
-            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/Menu.java</file>
-            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/Comida.java</file>
-            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/LugarAComer.java</file>
-            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/FastFoodJava.java</file>
+            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/ArchivoPension.java</file>
+            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/ArchivoQuiosco.java</file>
+            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/ArchivoCliente.java</file>
+            <file>file:/D:/Programacion/Repositorio%20Java/FastFoodJava/src/fastfoodjava/Cliente.java</file>
         </group>
     </open-files>
 </project-private>
